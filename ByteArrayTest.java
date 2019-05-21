@@ -2,7 +2,6 @@
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
-import java.lang.management.ManagementFactory;
 
 
 public class ByteArrayTest {
@@ -20,10 +19,5 @@ public class ByteArrayTest {
         ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
         IOUtils.copy(in, new FileOutputStream(new File("hello")));
         System.out.println("Finished for "+(System.currentTimeMillis()-start));
-
-        freeMemory = Runtime.getRuntime().freeMemory() ;
-        maxMemory = Runtime.getRuntime().maxMemory() ;
-
-        System.out.println("Used Memory in JVM: " + (maxMemory - freeMemory));
     }
 }
