@@ -10,7 +10,7 @@ public class ByteArrayTest {
         long maxMemory =0;
         //System.out.println(ManagementFactory.getRuntimeMXBean().getName());
         long start = System.currentTimeMillis();
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ByteArrayOutputStream out = new ByteArrayOutputStream(25*1024);
         for (int i = 0; i < 100000; i++) {
             out.write((i+" hello string strinasdhqlwkdhkqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjaaaaaaaaaaaaaaaaaaaaaaag gellowq akjsbdkjbqwjbdahbshbffkqwfkjhfskhsdlkjfhsdjkgbsdjbsdjfbs\n")
                     .getBytes());
