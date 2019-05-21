@@ -9,7 +9,7 @@ public class PipedStreams {
     public static void main(String[] args) throws IOException, InterruptedException {
         long start = System.currentTimeMillis();
         final PipedOutputStream output = new PipedOutputStream();
-        final PipedInputStream input = new PipedInputStream(output,100*1000);
+        final PipedInputStream input = new PipedInputStream(output,25*1024);
 
         Thread thread1 = new Thread(new Runnable() {
             @Override
